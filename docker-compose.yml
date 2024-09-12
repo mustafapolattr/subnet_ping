@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  subnet-ping:
+    image: subnet-ping:0.0.2
+    container_name: subnet-ping
+    ports:
+      - "8004:8004"
+    networks:
+      - default
+
+networks:
+  default:
+    external:
+      name: subnet-ping-default
